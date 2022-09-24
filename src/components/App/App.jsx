@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Header from '../Header/Header';
-import Pizza from '../Pizza/Pizza';
+import Pizza from '../Pizza/PizzaList';
 import './App.css';
 
 function App() {
