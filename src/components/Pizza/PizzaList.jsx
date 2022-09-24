@@ -36,13 +36,16 @@ const Pizza = () => {
         <>
             <div>
                 <button onClick={clearCart}>Clear Cart</button>
-
+                    
                 <h3>Choose your Pizza</h3>
                 {
                     pizzaList.map(pizza => (
                         <PizzaItem key={pizza.name} item = {pizza} />
                     ))
+                    
                 }
+                        <button onClick={() => history.push('')}>Next</button>
+
             </div>
         </>
     );        

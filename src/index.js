@@ -7,12 +7,19 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 
-const customer = (state = [], action) => {
+const customer = (state = '', action) => {
     console.log(action.payload);
     if(action.type === 'SET_CUSTOMER'){
         return action.payload;
     }
     return state;
+}
+const address = (state = '', action) => {
+    if (action.type === 'SET_ADDRESS'){
+        return action.payload;
+    } else if (action.type === 'CLEAR_ALL'){
+        return '';
+    }
 }
 
 const pizzaList = ( state = [], action) => {
@@ -39,6 +46,7 @@ const storeInstance = createStore(
     combineReducers(
         {
             customer,
+            address,
             pizzaList,
             cart,
 
